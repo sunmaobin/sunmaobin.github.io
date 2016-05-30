@@ -925,8 +925,7 @@ html {
 	max-height: 100%; }
 
 body {
-	font-family: 1em "Microsoft Yahei","Î¢ÈíÑÅºÚ","SimSun","ËÎÌå","Arial Narrow",serif;
-
+	font: 1em "Microsoft Yahei","SimSun","Arial Narrow",serif;
 	color: #666666; }
 
 ::selection {

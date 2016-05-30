@@ -1018,7 +1018,6 @@ code {
 	background: #e8f2fb;
 	border: 1px solid #c9e1f6;
 	border-radius: 3px;
-	font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 	font-size: .85em; }
 
 pre {
@@ -1027,7 +1026,6 @@ pre {
 	background: #e8f2fb;
 	border: 1px solid #c9e1f6; */
 	border-radius: 3px;
-	font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 	font-size: .9em;
 	font-weight: normal;
 	line-height: 1.3em; }
@@ -1103,14 +1101,14 @@ pre {
 
 .footer {
 	display: block;
-	padding: 2em 0 0 0;
+	padding: 1.5em 0;
 	border-top: 2px solid #dddddd;
 	font-size: .7em;
 	color: #b3b3b3; }
 
 .footer__copyright {
 	display: block;
-	margin-bottom: .7em; }
+ }
 	.footer__copyright a {
 		color: #a6a6a6;
 		text-decoration: underline; }
@@ -1408,13 +1406,11 @@ nav {
 	margin-left: 1em; }
 
 i {
-	font-family: 'entypo';
 	font-weight: normal;
 	font-style: normal;
 	font-size: 18px; }
 
 .icon-social {
-	font-family: 'entypo-social';
 	font-size: 22px;
 	display: block;
 	position: relative; }

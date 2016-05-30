@@ -925,8 +925,8 @@ html {
 	max-height: 100%; }
 
 body {
-	font-family: "Raleway", sans-serif;
-	font-size: 1em;
+	font-family: 1em "Microsoft Yahei","Î¢ÈíÑÅºÚ","SimSun","ËÎÌå","Arial Narrow",serif;
+
 	color: #666666; }
 
 ::selection {
@@ -953,28 +953,26 @@ h5,
 h5 {
 	margin-top: .8em;
 	margin-bottom: .4em;
-	font-family: "Roboto Slab", serif;
 	font-weight: lighter;
 	color: #333333;
 	-webkit-font-smoothing: antialiased; }
 
 h1 {
-	margin-top: 0;
-	font-size: 3.2em;
+	font-size: 2.2em;
 	line-height: 1.2em;
 	letter-spacing: .05em; }
 
 h2 {
-	font-size: 2.2em; }
+	font-size: 1.6em; }
 
 h3 {
-	font-size: 1.8em; }
-
-h4 {
 	font-size: 1.4em; }
 
 h4 {
 	font-size: 1.2em; }
+
+h4 {
+	font-size: 1em; }
 
 h5 {
 	font-size: 1em; }
@@ -995,7 +993,6 @@ blockquote {
 	background: #f8f8f8;
 	border: 1px solid #eeeeee;
 	border-radius: 3px;
-	font-family: "Roboto Slab", serif;
 	font-weight: lighter;
 	font-style: italic;
 	font-size: 1.3em;
@@ -1063,7 +1060,6 @@ pre {
 	color: #999999; }
 
 .intro {
-	font-family: "Roboto Slab", serif;
 	font-size: 1.2em;
 	font-weight: lighter;
 	color: #999999; }
@@ -1196,7 +1192,6 @@ hr {
 	color: #FFF; }
 
 .panel-subtitle {
-	font-family: "Roboto Slab", serif;
 	font-size: 1.2em;
 	font-weight: lighter;
 	letter-spacing: 3px;

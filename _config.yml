@@ -6,6 +6,9 @@ baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
+duoshuo_comment: true
+duoshuo_short_name: gdgoal
+
 author:
   name: 'Night'
   email: ismb@qq.com

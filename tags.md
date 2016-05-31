@@ -1,5 +1,5 @@
 ---
 layout: tags
-title: Tags
+title: 标签列表 - I'am Night
 permalink: /tags/
 ---

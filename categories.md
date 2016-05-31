@@ -1,5 +1,5 @@
 ---
 layout: categories
-title: Categories
+title: 分类列表 - I'am Night
 permalink: /categories/
 ---

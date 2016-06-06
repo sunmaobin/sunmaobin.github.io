@@ -1,9 +1,11 @@
 ---
-title:  收集一些常见的浏览器兼容插件
+title:  整理一些常见的浏览器兼容插件
 date:   20160606103503
 categories: [WEB]
 tags: [js,css]
 ---
+
+整理一些常见的浏览器兼容插件。
 
 ## CSS HACK
 

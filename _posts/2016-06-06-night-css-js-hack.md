@@ -1,9 +1,9 @@
 ---
 
 title:  整理一些常见的浏览器兼容插件
-date:   20160606103503
+date:   2016-06-06
 categories: [WEB]
-tags: [js,css]
+tags: [测试]
 
 ---
 

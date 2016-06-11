@@ -164,8 +164,7 @@ document.getElementById("click").onclick  = function(e){
 
 这是禁止页面跳转的一种方式。
 
-看了下面这篇文章就知道了，这里就不重复早轮子了。
-
+看了这篇文章就知道了：
 [谈谈Javascript中的void操作符](https://segmentfault.com/a/1190000000474941)
 
 
@@ -176,7 +175,6 @@ document.getElementById("click").onclick  = function(e){
 但是浏览器地址中的的 `hash` 不是 `#` 后面的参数吗？为什么要增加一个感叹号，不能直接这么写 `#home` 吗？
 
 
-看看阮一峰大神的这篇文章，就可以了:
-
+看看阮一峰大神的这篇文章，就明白了:
 [URL的井号](http://www.ruanyifeng.com/blog/2011/03/url_hash.html)
 

@@ -119,8 +119,6 @@ tags: [html]
 当然这个做法也还不是最好的，因为从功能上完全实现，体验上也没有问题，但是从写法上，总是有些怪异。比如：`javascript:;`，不是越看越不好理解吗？
 
 
-### 3、href="javascript:void(0);"
-
 当然要避免这种问题，可以使用js原生的事件机制，来屏蔽原始的事件，方法如下：
 
 方法1：
@@ -161,12 +159,24 @@ document.getElementById("click").onclick  = function(e){
 
 个人觉得方法一是最完美的处理方式。
 
-### 2、href="#!home"
+
+### 3、href="javascript:void(0);"
+
+这是禁止页面跳转的一种方式。
+
+看了下面这篇文章就知道了，这里就不重复早轮子了。
+
+[谈谈Javascript中的void操作符](https://segmentfault.com/a/1190000000474941)
+
+
+### 4、href="#!home"
 
 此种写法在 `SPA` 应用中最为常见，原理就是通过监听js的 `onStateChange` 事件，来控制路由规则，加载不同的HTML模板，实现页面切换。
 
 但是浏览器地址中的的 `hash` 不是 `#` 后面的参数吗？为什么要增加一个感叹号，不能直接这么写 `#home` 吗？
 
 
+看看阮一峰大神的这篇文章，就可以了:
 
+[URL的井号](http://www.ruanyifeng.com/blog/2011/03/url_hash.html)
 

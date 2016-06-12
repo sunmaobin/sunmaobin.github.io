@@ -1,7 +1,7 @@
 ---
 
 title: JS解惑-function的自执行的几种办法
-date: 20160612220419
+date: 20160612090419
 categories: [WEB]
 tags: [js]
 

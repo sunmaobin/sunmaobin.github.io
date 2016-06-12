@@ -81,9 +81,9 @@ bootstrap 组件就是这么用的。
 
 比如：!function autoFun(){}(); 可以这么理解。
 
-* 第一步：var fun = !function autoFun(){} //函数表达式
-* 第二步：fun(); //执行函数
+* 第一步：var autoFun = function (){} //函数表达式
+* 第二步：!autoFun(); //执行函数
 
-具体哪些操作符，可以达到这个目的，参考：http://swordair.com/function-and-exclamation-mark/
+具体哪些操作符，可以达到这个目的，参考：[http://swordair.com/function-and-exclamation-mark/](http://swordair.com/function-and-exclamation-mark/)
 
 另外，如果不知道 `函数申明` 和 `函数表达式` 的，请自行Google去吧！

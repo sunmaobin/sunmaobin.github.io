@@ -1,6 +1,6 @@
 ---
 
-title: JS解惑-function的自执行的几种办法
+title: JS解惑-function前面有+和!等特殊字符
 date: 20160612090419
 categories: [WEB]
 tags: [js]

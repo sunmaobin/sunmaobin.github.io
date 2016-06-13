@@ -30,14 +30,14 @@ html为什么要使用include？如何include？
 
 * JSP
 
-```jsp
+```html
 <jsp:include>
 <jsp:forward>
 ```
 
 * ASP
 
-```asp
+```html
 <!--# include file="file.tpl" -->
 ```
 

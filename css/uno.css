@@ -987,15 +987,15 @@ em {
 	font-style: italic; }
 
 blockquote {
-	margin: 1em 0;
-	padding: 2em 0;
-	background: #f8f8f8;
-	border: 1px solid #eeeeee;
-	border-radius: 3px;
-	font-weight: lighter;
-	font-style: italic;
-	font-size: 1.3em;
-	text-align: center; }
+    margin: 1em 0;
+    padding: .8em;
+    background: #f8f8f8;
+    color: #929292;
+    border-left: 5px solid #E4E4E4;
+    font-weight: lighter;
+    font-size: .9em;
+    text-align: left;
+}
 	blockquote p:last-child {
 		margin-bottom: 0; }
 

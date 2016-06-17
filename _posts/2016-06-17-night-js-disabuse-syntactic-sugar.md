@@ -47,6 +47,14 @@ tags: [js]
 * [维基百科-语法盐](https://en.wikipedia.org/wiki/Syntactic_sugar#Syntactic_salt)
 * [维基百科-语法糖精/语法糖浆](https://en.wikipedia.org/wiki/Syntactic_sugar#Syntactic_saccharin)
 
+## 总结
+
+语法糖并不是某一种特定语言的独有语法，而是所有计算机语言都有的，比如鼻祖类的C语言中就有了数组的语法糖等。
+
+只不过现在在前端JS中，尤其ES6中为了使得程序开发更有效率，更加一致，所以增加了很多语法糖（简单语法）而已。
+
+不要以为这是什么神秘技术，只是一种概念的称呼而已。
+
 ## 更多参考
 
 1. [维基百科-语法糖](https://en.wikipedia.org/wiki/Syntactic_sugar)

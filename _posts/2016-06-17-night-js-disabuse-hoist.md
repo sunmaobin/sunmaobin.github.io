@@ -94,7 +94,7 @@ var myvar = 'my value';
 先解释下这2个概念的专业术语：
 
 * 变量定义，Declaration
-* 变量初始化，Initializa
+* 变量初始化，Initialization
 
 示例：
 
@@ -104,7 +104,7 @@ var myvar = 'my value';
 
 解释：
 
-其实以上代码，在JS内部可是执行了2步，即：先定义，在初始化。   
+其实以上代码，在JS内部可是执行了2步，即：先定义，再初始化。   
 以上代码在JS内部执行的时候，是将定义和初始化分开执行：
 
 ```js
@@ -133,7 +133,7 @@ var functionName = function(arg1, arg2){
 };
 
 //函数表达式
-var functionName = function functionNameNormal(arg1, arg2){
+var functionName = function functionNameIgnored(arg1, arg2){
     //function body
 };
 
@@ -163,9 +163,9 @@ spam(); // ReferenceError "spam is not defined"
 
 补充说明下：
 
-1. 函数表达式，就当成是一个普通的变量定义而已，只是这个变量再未初始化为函数时，就是个单纯的undefine的变量；
+1. 函数表达式，再未初始化之前，就当成是一个普通的变量定义而已，没有任何状态、类型，就是undefined；
 1. 函数申明，函数定义和函数体都会被提前执行；
-1. 函数表达式中，如果不是匿名函数，那么js解析器也会忽略这个无用函数变量，所以上面的例子中，即时函数都初始化完毕，最后执行spam()，依然会报错。
+1. 函数表达式中，如果不是匿名函数，那么js解析器也会忽略这个无用函数变量，所以上面的例子中，即时函数都初始化完毕，最后执行spam()，依然会报错，因为这个变量就相当于没有。
 
 ## 五、扩展
 
@@ -174,11 +174,11 @@ spam(); // ReferenceError "spam is not defined"
 1. JS默认的2个变量（this和arguments），函数初始化就存在，会自动进入作用域；
 1. 作为正常的参数，如function（arg1），这里的arg1在函数执行时就进入了当前函数作用域；
 1. 函数申明，如function myfun（），这里myfun以函数的形式进入了全局作用域；
-1. 变量申明，如var fun，这里fun就进入了当前作用域；
+1. 变量申明，如var obj，这里obj就进入了当前作用域；
 
 ## 六、习题
 
-好了，所有概念全部整理完了，以下经常在面试中出现的习题，大家不放围观下。
+好了，所有概念全部梳理完了，以下经常在面试中出现的习题，大家不放围观下。
 
 1、开篇的题目
 
@@ -238,7 +238,7 @@ var x = 0;
 
 function(){
     var x;//当前作用域内定义x
-    x = y;//由于测试y未定义，所以当前作用域内的x=undefined
+    x = y;//由于测试y未定义，所以当前作用域内的x=undefined，脱离当前作用域，别的地方获取的还是全局的x
     y = 1;//由于y之前未添加var，其实相当于：window.y = 1，是全局变量，所以下方能访问到
 }
 f();

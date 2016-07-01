@@ -13,7 +13,7 @@ css3中新增单位 `rem`，那么如何区分和何时使用 `rem` 和 `em` 呢
 
 ### 1、rem
 
-指相当于document根目录字体而言的相对单位，默认是相当于浏览器默认字体（16px）,即：1rem = 16px。
+相对于document根目录字体而言的相对单位，默认是相对于浏览器默认字体（16px）,即：1rem = 16px。
 
 ### 2、em
 
@@ -22,13 +22,13 @@ css3中新增单位 `rem`，那么如何区分和何时使用 `rem` 和 `em` 呢
 如：
 
 ```
-|-- div1（font-size:12px）
-    |-- div2（font-size:2em;padding:3em）
+|-- div1（font-size:12px;）
+    |-- div2（font-size:2em;padding:3em;）
 ```
 
 div2的padding = 3 x 2 x 12px = 72px。
 
-既然都是相对单位，那么再不考虑浏览器兼容的情况下，如何选择使用这2个单位呢？
+既然都是相对单位，那么在不考虑浏览器兼容的情况下，如何选择使用这2个单位呢？
 
 ## 二、使用
 

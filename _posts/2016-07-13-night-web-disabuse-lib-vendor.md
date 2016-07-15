@@ -1,6 +1,6 @@
 ---
 
-title: JS解惑-语法糖
+title: WEB解惑-lib和vendor
 date: 201607130542
 categories: [WEB]
 tags: [web]

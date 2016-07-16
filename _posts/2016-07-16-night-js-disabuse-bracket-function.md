@@ -15,7 +15,7 @@ JS中经常能看到 `(function(){...})()`，那么双括号()到底是什么意
 
 形式是这样的：
 
-```
+```js
 (function(){
     //TODO
 })();
@@ -23,7 +23,7 @@ JS中经常能看到 `(function(){...})()`，那么双括号()到底是什么意
 
 当然在jquery中，有时候为了避免变量$冲突，也经常这么用：
 
-```
+```js
 jQuery.noConflict();
 (function($){
     //TODO
@@ -58,7 +58,7 @@ ParenthesizedExpression : ( Expression )
 });
 ```
 
-结果就是这个function的函数表达式，即：
+打印结果就是这个function的函数表达式，即：
 
 ```js
 function(){
@@ -66,7 +66,7 @@ function(){
 }
 ```
 
-如果上的例子，后面再加一个()，那么就是立即执行这个函数，即：
+如果上面的例子，后面再加一个()，那么就是立即执行这个函数，即：
 
 ```js
 (function(){
@@ -80,16 +80,27 @@ function(){
 
 写到这里大家可能会问，为什么要这么用呢？
 
-当然，至少有2个作用：
+2个作用：
 
-* 立即执行函数，即：self-executing anonymous function
-* 构建独立不受污染的作用域
+* 立即执行函数，即：self-executing function
+* 构建独立不受污染的块级作用域
 
 关于立即执行函数，参考我之前写过的一片文章：
 
 * [JS解惑-function前面有+和!等特殊字符](http://www.night123.com/2016/night-js-disabuse-function/)
 
 另外，我们知道JS在ES6之前是没有块级作用域的，那么通过这种 `(匿名函数)` 的形式，可以保证 `()` 函数中拥有独立的作用域，而外部无法访问。
+
+> 什么是块级作用域？你可以简单这么理解，即在（if/for/while）等块状语句中，变量其实是全局的。比如：
+
+```js
+for(var i=0;i<10;i++){
+   //TODO
+};
+console.log(i);
+```
+
+结果为：10，也就是说，你在for中定义的变量i，在for结束后依然生效。
 
 
 **这可能是一个引用**
@@ -120,7 +131,7 @@ Object {name: "night"}
 ```js
 (obj.sayHi)();//hello night
 //注意：(obj.sayHi())()，是不正确的哦！！！
-//因为(obj.sayHi)本身就返回了一个应用对象哦，不能在()里面直接就运行哦，那你要()就没用了。
+//因为(obj.sayHi)本身就返回了一个引用对象，不能在()里面直接就运行哦，那你要两个()就没用了。
 ```
 
 我还是分析下吧：
@@ -132,14 +143,14 @@ Object {name: "night"}
 
 `JavaScript 高级程序设计（第三版）` 的 `7.2.2 关于this对象` 中有个例子，看了以上概念，大家肯定更好理解了。
 
-例子在这本书的 `P183页` 最终结果：My Object，大家自己去看。
+例子在这本书的 `183页` 最终结果：My Object，大家自己去看。
 
 ## 结论
 
 `(expression)` 的理解：
 
 * 返回计算表达式的结果
-* 返回一个引用
+* 还可能返回的是一个引用
 
 `(expression)()` 的作用：
 
@@ -149,6 +160,6 @@ Object {name: "night"}
 ## 参考
 
 1. [Ecma-262](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
-1. http://stackoverflow.com/questions/4043647/what-does-this-function-a-function-inside-brackets-mean-in-javascript
-1. http://stackoverflow.com/questions/440739/what-do-parentheses-surrounding-a-javascript-object-function-class-declaration-m
+1. [http://stackoverflow.com/questions/4043647/what-does-this-function-a-function-inside-brackets-mean-in-javascript](http://stackoverflow.com/questions/4043647/what-does-this-function-a-function-inside-brackets-mean-in-javascript)
+1. [http://stackoverflow.com/questions/440739/what-do-parentheses-surrounding-a-javascript-object-function-class-declaration-m](http://stackoverflow.com/questions/440739/what-do-parentheses-surrounding-a-javascript-object-function-class-declaration-m)
 

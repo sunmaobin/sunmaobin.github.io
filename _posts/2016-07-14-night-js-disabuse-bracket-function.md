@@ -1,19 +1,19 @@
 ---
 
-title: JS½â»ó-()±í´ïÊ½µÄº¬Òå
+title: JSè§£æƒ‘-()è¡¨è¾¾å¼çš„å«ä¹‰
 date: 20160714050413
 categories: [WEB]
 tags: [js]
 
 ---
 
-JSÖÐ¾­³£ÄÜ¿´µ½ `(function(){...})()`£¬ÄÇÃ´Ë«À¨ºÅ()µ½µ×ÊÇÊ²Ã´ÒâË¼ÄØ£¿
+JSä¸­ç»å¸¸èƒ½çœ‹åˆ° `(function(){...})()`ï¼Œé‚£ä¹ˆåŒæ‹¬å·()åˆ°åº•æ˜¯ä»€ä¹ˆæ„æ€å‘¢ï¼Ÿ
 
-## ±³¾°
+## èƒŒæ™¯
 
-ÎÒÃÇÏÈÀ´¿´¿´Ò»Ð©Êµ¼Ê¹¤×÷ÖÐÓÃµ½µÄ()µÄÀý×Ó¡£
+æˆ‘ä»¬å…ˆæ¥çœ‹çœ‹ä¸€äº›å®žé™…å·¥ä½œä¸­ç”¨åˆ°çš„()çš„ä¾‹å­ã€‚
 
-ÐÎÊ½ÊÇÕâÑùµÄ£º
+å½¢å¼æ˜¯è¿™æ ·çš„ï¼š
 
 ```js
 (function(){
@@ -21,7 +21,7 @@ JSÖÐ¾­³£ÄÜ¿´µ½ `(function(){...})()`£¬ÄÇÃ´Ë«À¨ºÅ()µ½µ×ÊÇÊ²Ã´ÒâË¼ÄØ£¿
 })();
 ```
 
-µ±È»ÔÚjqueryÖÐ£¬ÓÐÊ±ºòÎªÁË±ÜÃâ±äÁ¿$³åÍ»£¬Ò²¾­³£ÕâÃ´ÓÃ£º
+å½“ç„¶åœ¨jqueryä¸­ï¼Œæœ‰æ—¶å€™ä¸ºäº†é¿å…å˜é‡$å†²çªï¼Œä¹Ÿç»å¸¸è¿™ä¹ˆç”¨ï¼š
 
 ```js
 jQuery.noConflict();
@@ -30,27 +30,27 @@ jQuery.noConflict();
 })(jQuery);
 ```
 
-## ·ÖÎö
+## åˆ†æž
 
 
-Òý×Ô `Ecma-262` µÚ `12.2.10.4ÕÂ½Ú` µÄÓï¾ä£º
+å¼•è‡ª `Ecma-262` ç¬¬ `12.2.10.4ç« èŠ‚` çš„è¯­å¥ï¼š
 
 ```
 ParenthesizedExpression : ( Expression ) 
    1. Return the result of evaluating Expression. This may be of type Reference.
 ```
 
-ÎÒ¸öÈËµÄÀí½â·­Òë£º
+æˆ‘ä¸ªäººçš„ç†è§£ç¿»è¯‘ï¼š
 
 ```
-Ô²À¨ºÅÀ¨ÆðÀ´µÄ±í´ïÊ½£º(±í´ïÊ½)
+åœ†æ‹¬å·æ‹¬èµ·æ¥çš„è¡¨è¾¾å¼ï¼š(è¡¨è¾¾å¼)
 
-·µ»Ø¼ÆËã±í´ïÊ½µÄ½á¹û£¬Õâ¿ÉÄÜÊÇÒ»¸öÒýÓÃ¡£
+è¿”å›žè®¡ç®—è¡¨è¾¾å¼çš„ç»“æžœï¼Œè¿™å¯èƒ½æ˜¯ä¸€ä¸ªå¼•ç”¨ã€‚
 ```
 
-**·µ»Ø¼ÆËã±í´ïÊ½µÄ½á¹û**
+**è¿”å›žè®¡ç®—è¡¨è¾¾å¼çš„ç»“æžœ**
 
-Õâ¾ä»°ÔõÃ´Àí½âÄØ£¿¾Ù¸öÀý×Ó£º
+è¿™å¥è¯æ€Žä¹ˆç†è§£å‘¢ï¼Ÿä¸¾ä¸ªä¾‹å­ï¼š
 
 ```js
 (function(){
@@ -58,7 +58,7 @@ ParenthesizedExpression : ( Expression )
 });
 ```
 
-´òÓ¡½á¹û¾ÍÊÇÕâ¸öfunctionµÄº¯Êý±í´ïÊ½£¬¼´£º
+æ‰“å°ç»“æžœå°±æ˜¯è¿™ä¸ªfunctionçš„å‡½æ•°è¡¨è¾¾å¼ï¼Œå³ï¼š
 
 ```js
 function(){
@@ -66,7 +66,7 @@ function(){
 }
 ```
 
-Èç¹ûÉÏÃæµÄÀý×Ó£¬ºóÃæÔÙ¼ÓÒ»¸ö()£¬ÄÇÃ´¾ÍÊÇÁ¢¼´Ö´ÐÐÕâ¸öº¯Êý£¬¼´£º
+å¦‚æžœä¸Šé¢çš„ä¾‹å­ï¼ŒåŽé¢å†åŠ ä¸€ä¸ª()ï¼Œé‚£ä¹ˆå°±æ˜¯ç«‹å³æ‰§è¡Œè¿™ä¸ªå‡½æ•°ï¼Œå³ï¼š
 
 ```js
 (function(){
@@ -74,28 +74,28 @@ function(){
 })();
 ```
 
-½á¹û£º123456
+ç»“æžœï¼š123456
 
-ÒýÉê£º
+å¼•ç”³ï¼š
 
-Ð´µ½ÕâÀï´ó¼Ò¿ÉÄÜ»áÎÊ£¬ÎªÊ²Ã´ÒªÕâÃ´ÓÃÄØ£¿
+å†™åˆ°è¿™é‡Œå¤§å®¶å¯èƒ½ä¼šé—®ï¼Œä¸ºä»€ä¹ˆè¦è¿™ä¹ˆç”¨å‘¢ï¼Ÿ
 
-2¸ö×÷ÓÃ£º
+2ä¸ªä½œç”¨ï¼š
 
-* Á¢¼´Ö´ÐÐº¯Êý£¬¼´£ºself-executing function
-* ¹¹½¨¶ÀÁ¢²»ÊÜÎÛÈ¾µÄ¿é¼¶×÷ÓÃÓò
+* ç«‹å³æ‰§è¡Œå‡½æ•°ï¼Œå³ï¼šself-executing function
+* æž„å»ºç‹¬ç«‹ä¸å—æ±¡æŸ“çš„å—çº§ä½œç”¨åŸŸ
 
-¹ØÓÚÁ¢¼´Ö´ÐÐº¯Êý£¬²Î¿¼ÎÒÖ®Ç°Ð´¹ýµÄÒ»Æ¬ÎÄÕÂ£º
+å…³äºŽç«‹å³æ‰§è¡Œå‡½æ•°ï¼Œå‚è€ƒæˆ‘ä¹‹å‰å†™è¿‡çš„ä¸€ç‰‡æ–‡ç« ï¼š
 
-* [JS½â»ó-functionÇ°ÃæÓÐ+ºÍ!µÈÌØÊâ×Ö·û](http://www.night123.com/2016/night-js-disabuse-function/)
+* [JSè§£æƒ‘-functionå‰é¢æœ‰+å’Œ!ç­‰ç‰¹æ®Šå­—ç¬¦](http://www.night123.com/2016/night-js-disabuse-function/)
 
-ÁíÍâ£¬ÎÒÃÇÖªµÀJSÔÚES6Ö®Ç°ÊÇÃ»ÓÐ¿é¼¶×÷ÓÃÓòµÄ£¬ÄÇÃ´Í¨¹ýÕâÖÖ `(ÄäÃûº¯Êý)` µÄÐÎÊ½£¬¿ÉÒÔ±£Ö¤ `()` º¯ÊýÖÐÓµÓÐ¶ÀÁ¢µÄ×÷ÓÃÓò£¬¶øÍâ²¿ÎÞ·¨·ÃÎÊ¡£
+å¦å¤–ï¼Œæˆ‘ä»¬çŸ¥é“JSåœ¨ES6ä¹‹å‰æ˜¯æ²¡æœ‰å—çº§ä½œç”¨åŸŸçš„ï¼Œé‚£ä¹ˆé€šè¿‡è¿™ç§ `(åŒ¿åå‡½æ•°)` çš„å½¢å¼ï¼Œå¯ä»¥ä¿è¯ `()` å‡½æ•°ä¸­æ‹¥æœ‰ç‹¬ç«‹çš„ä½œç”¨åŸŸï¼Œè€Œå¤–éƒ¨æ— æ³•è®¿é—®ã€‚
 
-> Ê²Ã´ÊÇ¿é¼¶×÷ÓÃÓò£¿
-> ¼´£¬ÔÚÒ»Ð©ÀàËÆÓÚCÓïÑÔµÄ±à³ÌÓïÑÔÖÐ£¬»¨À¨ºÅÄÚµÄÃ¿Ò»¶Î´úÂë¶¼¾ßÓÐ¸÷×ÔµÄ×÷ÓÃÓò£¬¶øÇÒ±äÁ¿ÔÚÉùÃ÷ËüÃÇµÄ´úÂë¶ÎÖ®ÍâÊÇ²»¿É¼ûµÄ¡£
-> ³ö×Ô¡¶JavaScript È¨ÍþÖ¸ÄÏ¡·ÖÐ`3.10.1`ÕÂ½Ú£¬¼´`57Ò³`
+> ä»€ä¹ˆæ˜¯å—çº§ä½œç”¨åŸŸï¼Ÿ
+> å³ï¼Œåœ¨ä¸€äº›ç±»ä¼¼äºŽCè¯­è¨€çš„ç¼–ç¨‹è¯­è¨€ä¸­ï¼ŒèŠ±æ‹¬å·å†…çš„æ¯ä¸€æ®µä»£ç éƒ½å…·æœ‰å„è‡ªçš„ä½œç”¨åŸŸï¼Œè€Œä¸”å˜é‡åœ¨å£°æ˜Žå®ƒä»¬çš„ä»£ç æ®µä¹‹å¤–æ˜¯ä¸å¯è§çš„ã€‚
+> å‡ºè‡ªã€ŠJavaScript æƒå¨æŒ‡å—ã€‹ä¸­`3.10.1`ç« èŠ‚ï¼Œå³`57é¡µ`
 
-±ÈÈç£º
+æ¯”å¦‚ï¼š
 
 ```js
 for(var i=0;i<10;i++){
@@ -104,12 +104,12 @@ for(var i=0;i<10;i++){
 console.log(i);
 ```
 
-½á¹ûÎª£º10£¬Ò²¾ÍÊÇËµ£¬ÄãÔÚforÖÐ¶¨ÒåµÄ±äÁ¿i£¬ÔÚfor½áÊøºóÒÀÈ»ÉúÐ§¡£
+ç»“æžœä¸ºï¼š10ï¼Œä¹Ÿå°±æ˜¯è¯´ï¼Œä½ åœ¨forä¸­å®šä¹‰çš„å˜é‡iï¼Œåœ¨forç»“æŸåŽä¾ç„¶ç”Ÿæ•ˆã€‚
 
 
-**Õâ¿ÉÄÜÊÇÒ»¸öÒýÓÃ**
+**è¿™å¯èƒ½æ˜¯ä¸€ä¸ªå¼•ç”¨**
 
-Õâ¾ä»°ÔõÃ´Àí½âÄØ£¿¾Ù¸öÀý×Ó£º
+è¿™å¥è¯æ€Žä¹ˆç†è§£å‘¢ï¼Ÿä¸¾ä¸ªä¾‹å­ï¼š
 
 ```js
 var obj = {
@@ -121,7 +121,7 @@ var obj = {
 (obj);
 ```
 
-½á¹û¾ÍÊÇÕâ¸öobjµÄ¶ÔÏó±¾Éí£¨Ò²¾Í¶¨ÒåÖÐËµµÄ£¬ÊÇ¶ÔobjµÄÒýÓÃ£©£º
+ç»“æžœå°±æ˜¯è¿™ä¸ªobjçš„å¯¹è±¡æœ¬èº«ï¼ˆä¹Ÿå°±å®šä¹‰ä¸­è¯´çš„ï¼Œæ˜¯å¯¹objçš„å¼•ç”¨ï¼‰ï¼š
 
 ```js
 Object {name: "night"}
@@ -130,38 +130,38 @@ Object {name: "night"}
     __proto__:Object
 ```
 
-¼ÈÈ»ÊÇÕâÑù£¬ÄÇÃ´ÒÔÏÂÓï¾ä½á¹û¾Í²»ÑÔ¶øÓ÷ÁË°É£º
+æ—¢ç„¶æ˜¯è¿™æ ·ï¼Œé‚£ä¹ˆä»¥ä¸‹è¯­å¥ç»“æžœå°±ä¸è¨€è€Œå–»äº†å§ï¼š
 
 ```js
 (obj.sayHi)();//hello night
-//×¢Òâ£º(obj.sayHi())()£¬ÊÇ²»ÕýÈ·µÄÅ¶£¡£¡£¡
-//ÒòÎª(obj.sayHi)±¾Éí¾Í·µ»ØÁËÒ»¸öÒýÓÃ¶ÔÏó£¬²»ÄÜÔÚ()ÀïÃæÖ±½Ó¾ÍÔËÐÐÅ¶£¬ÄÇÄãÒªÁ½¸ö()¾ÍÃ»ÓÃÁË¡£
+//æ³¨æ„ï¼š(obj.sayHi())()ï¼Œæ˜¯ä¸æ­£ç¡®çš„å“¦ï¼ï¼ï¼
+//å› ä¸º(obj.sayHi)æœ¬èº«å°±è¿”å›žäº†ä¸€ä¸ªå¼•ç”¨å¯¹è±¡ï¼Œä¸èƒ½åœ¨()é‡Œé¢ç›´æŽ¥å°±è¿è¡Œå“¦ï¼Œé‚£ä½ è¦ä¸¤ä¸ª()å°±æ²¡ç”¨äº†ã€‚
 ```
 
-ÎÒ»¹ÊÇ·ÖÎöÏÂ°É£º
+æˆ‘è¿˜æ˜¯åˆ†æžä¸‹å§ï¼š
 
-* (obj) = obj;//¼´£¬¶ÔobjµÄÒýÓÃ
-* (obj.sayHi) = obj.sayHi();//¼´£¬µ÷ÓÃ¶ÔÏó×Ô¼ºµÄsayHi·½·¨
+* (obj) = obj;//å³ï¼Œå¯¹objçš„å¼•ç”¨
+* (obj.sayHi) = obj.sayHi();//å³ï¼Œè°ƒç”¨å¯¹è±¡è‡ªå·±çš„sayHiæ–¹æ³•
 
-ÒýÉê£º
+å¼•ç”³ï¼š
 
-`JavaScript ¸ß¼¶³ÌÐòÉè¼Æ£¨µÚÈý°æ£©` µÄ `7.2.2 ¹ØÓÚthis¶ÔÏó` ÖÐÓÐ¸öÀý×Ó£¬¿´ÁËÒÔÉÏ¸ÅÄî£¬´ó¼Ò¿Ï¶¨¸üºÃÀí½âÁË¡£
+`JavaScript é«˜çº§ç¨‹åºè®¾è®¡ï¼ˆç¬¬ä¸‰ç‰ˆï¼‰` çš„ `7.2.2 å…³äºŽthiså¯¹è±¡` ä¸­æœ‰ä¸ªä¾‹å­ï¼Œçœ‹äº†ä»¥ä¸Šæ¦‚å¿µï¼Œå¤§å®¶è‚¯å®šæ›´å¥½ç†è§£äº†ã€‚
 
-Àý×ÓÔÚÕâ±¾ÊéµÄ `183Ò³` ×îÖÕ½á¹û£ºMy Object£¬´ó¼Ò×Ô¼ºÈ¥¿´¡£
+ä¾‹å­åœ¨è¿™æœ¬ä¹¦çš„ `183é¡µ` æœ€ç»ˆç»“æžœï¼šMy Objectï¼Œå¤§å®¶è‡ªå·±åŽ»çœ‹ã€‚
 
-## ½áÂÛ
+## ç»“è®º
 
-`(expression)` µÄÀí½â£º
+`(expression)` çš„ç†è§£ï¼š
 
-* ·µ»Ø¼ÆËã±í´ïÊ½µÄ½á¹û
-* »¹¿ÉÄÜ·µ»ØµÄÊÇÒ»¸öÒýÓÃ
+* è¿”å›žè®¡ç®—è¡¨è¾¾å¼çš„ç»“æžœ
+* è¿˜å¯èƒ½è¿”å›žçš„æ˜¯ä¸€ä¸ªå¼•ç”¨
 
-`(expression)()` µÄ×÷ÓÃ£º
+`(expression)()` çš„ä½œç”¨ï¼š
 
-* Á¢¼´Ö´ÐÐº¯Êý
-* ¹¹½¨¶ÀÁ¢²»ÊÜÎÛÈ¾µÄ×÷ÓÃÓò
+* ç«‹å³æ‰§è¡Œå‡½æ•°
+* æž„å»ºç‹¬ç«‹ä¸å—æ±¡æŸ“çš„ä½œç”¨åŸŸ
 
-## ²Î¿¼
+## å‚è€ƒ
 
 1. [Ecma-262](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
 1. [http://stackoverflow.com/questions/4043647/what-does-this-function-a-function-inside-brackets-mean-in-javascript](http://stackoverflow.com/questions/4043647/what-does-this-function-a-function-inside-brackets-mean-in-javascript)

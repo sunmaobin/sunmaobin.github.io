@@ -25,42 +25,42 @@ css中有诸多选择器，运用得当的情况下，能让你少些不少的js
 
 1. 通用选择器
 
-	```css
-	//对所有元素都生效
-	*{
-		padding:0;
-		margin:0;
-		box-sizing:border-box;
-	}
-	```
+```css
+//对所有元素都生效
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+```
 
 1. 元素选择器
 
-	```css
-	//仅对p元素生效
-	p{
-		margin: 5px 0;
-	}
-	```
+```css
+//仅对p元素生效
+p{
+	margin: 5px 0;
+}
+```
 
 1. 类选择器
 
-	```css
-	//仅对某一类元素生效
-	//这个与【元素选择器】有点类似，只是【类选择器】中的【类class】是自己定义的，而【元素选择器】中的【元素element】是html自带的。
-	.demo{
-		color : blue;
-	}
-	```
+```css
+//仅对某一类元素生效
+//这个与【元素选择器】有点类似，只是【类选择器】中的【类class】是自己定义的，而【元素选择器】中的【元素element】是html自带的。
+.demo{
+	color : blue;
+}
+```
 
 1. ID选择器
 
-	```css
-	//仅对某一个元素生效
-	#demo1{
-		color : red;
-	}
-	```
+```css
+//仅对某一个元素生效
+#demo1{
+	color : red;
+}
+```
 
 #### 1.2 组合套路
 

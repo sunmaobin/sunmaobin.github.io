@@ -1,6 +1,6 @@
 ---
 
-title: WebApp解惑-页面适配
+title: 移动端H5解惑-页面适配
 date: 20160701125435
 categories: [WEB]
 tags: [mobile]

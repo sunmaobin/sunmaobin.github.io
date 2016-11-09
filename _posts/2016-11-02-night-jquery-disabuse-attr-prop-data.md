@@ -37,9 +37,12 @@ jQuery中提供了3个方法，`.attr()`、`.prop()` 和 `.data()`，本文就�
 
 那么，为什么在1.6.1开始就区分了 `attr` 和 `prop` 这2个概念了呢？
 
-比如：`document` 和 `window` 这2个js对象，他们是没有 `attributes` 的（可以看到的属性），因为这是2个隐藏于页面内部的2个对象。
+以下阐述可能就是原因：
 
+对于 `document` 和 `window` 这2个js对象，他们是没有 `attributes` 的（可以看到的属性），因为这是2个隐藏于页面内部的2个对象。
 但是，`window`却拥有类似于 `loation`、`screen`等 `properties`。明白了吧？
+
+也就是说，直到1.6.1开始，人们才认清了属性和特性之间的区别，应该区分来处理。
 
 看看示例：
 
@@ -51,7 +54,7 @@ jQuery中提供了3个方法，`.attr()`、`.prop()` 和 `.data()`，本文就�
 
 `.prop()` 是用在具有 `Boolean` 类型属性/特性上，而且对于特性而言它们并不在html上存在（比如：window.location），其它你能在页面上看到的所有的属性，都可以使用 `.attr()`。
 
-**说明：**在 `jquery-1.6.1`之后，你也可以使用 `.attr()` 来获取 `document/window`的一些特性，但是对于类似于 `checked` 之类的，如果页面上没有这个属性，你获取到的结果是 `undefined`，并不能很好的反应其是否被选中！所以，改用 `.prot()` 的时候还是要用。
+**说明：**在 `jquery-1.6.1`之后，你也可以使用 `.attr()` 来获取 `document/window`的一些特性，但是对于类似于 `checked` 之类的，如果页面上没有这个属性，你获取到的结果是 `undefined`，并不能很好的反应其是否被选中！所以，该用 `.prop()` 的时候还是要用。
 
 ## .attr 和 .data
 
@@ -141,10 +144,10 @@ $('#foo').data('json'); //object  {fizz:['buzz']}
     console.log($("#checkbox").data('nameHeight'));//undefined
 ```
 
-** 说明：** 
+**说明：** 
 
-1. `data-`之后当然也可以使用下划线 `_`，但是就不支持驼峰取值了;
-2. 使用驼峰式，还可以这么取值：`$("#checkbox").data()['nameHeight']`，但是 `$("#checkbox").data()['name-height']` 就获取不到值，可能的原因是：js中不推荐使用中划线。
+* `data-`之后当然也可以使用下划线 `_`，但是就不支持驼峰取值了;
+* 使用驼峰式，还可以这么取值：`$("#checkbox").data()['nameHeight']`，但是 `$("#checkbox").data()['name-height']` 就获取不到值，可能的原因是：js中不推荐使用中划线。
 
 #### 4、与 `.prop()` 有几分相似
 

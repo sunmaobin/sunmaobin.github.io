@@ -7,7 +7,7 @@ tags: [js]
 
 ---
 
-最近再用ajax进行上传的时候，用到了许多ajax上传的js插件，有一些坑，拿出来跟大家分享下。
+最近在用ajax进行上传的时候，用到了许多ajax上传的js插件，有一些坑，拿出来跟大家分享下。
 
 ## 常用的2款ajax上传插件
 
@@ -20,7 +20,7 @@ tags: [js]
 
 ## 基础知识
 
-###关于input:file的特殊限制
+### 关于input:file的特殊限制
 
 1. 处于安全限制，浏览器禁止使用js修改input:file的值。比如你想清空file文本框：`$('#file').val('')`，是不行滴。
 1. 处于安全限制，对于input:file，`clone()`后的对象，value是空的。
@@ -78,8 +78,8 @@ $('#fileParent').on(':file','xxx',function(){});
 
 **options**
 
-`replaceFileInput` 是否替换当前file，默认：true，也就是默认情况下每次使用 `clone()` 替换旧的file。如果这个值设置为false，那么就会出现上文中 `问题2` 的情况，建议保持true。
-`formData` 上传时的参数，默认取得file所在form所有的参数，可以自己定义仅仅取得自己想要的参数传递，看看API就可以了。
+* `replaceFileInput` 是否替换当前file，默认：true，也就是默认情况下每次使用 `clone()` 替换旧的file。如果这个值设置为false，那么就会出现上文中 `问题2` 的情况，建议保持true。
+* `formData` 上传时的参数，默认取得file所在form所有的参数，可以自己定义仅仅取得自己想要的参数传递，看看API就可以了。
 
 当然这个框架的功能还很多，比如：各种状态下的事件回调，跨域处理，进度条等等，大家去研究下API。 
 
@@ -87,3 +87,5 @@ $('#fileParent').on(':file','xxx',function(){});
 
 ## 参考
 
+* [AjaxFileUpload](https://github.com/carlcarl/AjaxFileUpload)
+* [jQuery File Upload](http://blueimp.github.io/jQuery-File-Upload/)

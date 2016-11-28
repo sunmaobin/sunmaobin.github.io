@@ -58,6 +58,11 @@ function   ($,        canvas,   sub) {
 > 注意：`requirejs.config` 的 `paths` 中一定不能带有文件后缀名，如 `.js` ，因为它有可能是一个目录！
 > 如果带了，require请求的文件结果，可能会是这样 `http://.../js/jquery.min.js.js`
 
+详见 [http://requirejs.org/docs/api.html#config-paths](http://requirejs.org/docs/api.html#config-paths)
+
+> The path that is used for a module name should not include an extension, since the path mapping could be for a directory. The path mapping code will automatically add the .js extension when mapping the module name to a path. If require.toUrl() is used, it will add the appropriate extension, if it is for something like a text template.
+
+
 ## 多页面
 
 以上常规用法，一般适合 `SPA` 即单页面应用，由一个主页面作为入口，全程AJAX无刷操作。但是，如果有多个页面跳转，而每个页面都想使用require，并且使用全局一个配置，怎么办呢？

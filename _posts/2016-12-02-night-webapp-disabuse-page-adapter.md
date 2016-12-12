@@ -457,5 +457,6 @@ window.addEventListener("onorientationchange" in window ? "orientationchange" : 
 * [移动端H5页面之iphone6的适配](http://www.ghugo.com/mobile-h5-fluid-layout-for-iphone6/)
 * [WebKit最新特性srcset简介](http://developer.51cto.com/art/201309/410720.htm)
 * [HTML5实战与剖析之判断移动端横屏竖屏功能](http://www.w3cways.com/1772.html)
+* [Retina屏的移动设备如何实现真正1px的线？](http://www.tuicool.com/articles/6Vvqmu)
 
 （全文完）

@@ -7,9 +7,11 @@ tags: [js]
 
 ---
 
-让一个函数页面加载后就运行，你的脑海中能想出几种办法呢？
+让一个函数页面加载后就运行（专业术语叫：[IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)），你的脑海中能想出几种办法呢？
 
 本文就总结下一些常用的办法，同时一些不常用的，但是在一些牛人写的框架的源码中经常会出现的函数自执行的方法。
+
+
 
 ## 一、几种常见的方法
 
@@ -84,6 +86,11 @@ bootstrap 组件就是这么用的。
 * 第一步：var autoFun = function (){} //函数表达式
 * 第二步：!autoFun(); //执行函数
 
-具体哪些操作符，可以达到这个目的，参考：[http://swordair.com/function-and-exclamation-mark/](http://swordair.com/function-and-exclamation-mark/)
+具体哪些操作符，可以达到这个目的，参考：[IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 
 另外，如果不知道 `函数申明` 和 `函数表达式` 的，请自行Google去吧！
+
+## 参考
+
+* [function与感叹号](http://swordair.com/function-and-exclamation-mark/)
+* [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)

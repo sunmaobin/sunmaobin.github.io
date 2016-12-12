@@ -91,10 +91,10 @@ if(!window.XMLHttpRequest){
 
 ## 参考
 
-1. https://en.wikipedia.org/wiki/Shim_(computing)
-1. https://en.wikipedia.org/wiki/Polyfill
-1. https://segmentfault.com/a/1190000002593432
-1. https://www.zhihu.com/question/22129715
+1. [https://en.wikipedia.org/wiki/Shim_(computing)](https://en.wikipedia.org/wiki/Shim_(computing))
+1. [https://en.wikipedia.org/wiki/Polyfill](https://en.wikipedia.org/wiki/Polyfill)
+1. [https://segmentfault.com/a/1190000002593432](https://segmentfault.com/a/1190000002593432)
+1. [https://www.zhihu.com/question/22129715](https://www.zhihu.com/question/22129715)
 
 
 

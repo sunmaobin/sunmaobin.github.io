@@ -24,7 +24,7 @@ tags: [js]
 比如：IE9以下不支持 `<header>` 标签，`HTML5 shim` 的核心原理就是通过js创建这样一个对象。
 
 ```js
-//@see https://github.com/aFarkas/html5shiv/blob/master/src/html5shiv.js
+//@see [https://github.com/aFarkas/html5shiv/blob/master/src/html5shiv.js](https://github.com/aFarkas/html5shiv/blob/master/src/html5shiv.js)
 
 //line 127
 function createElement(nodeName, ownerDocument, data){
@@ -74,7 +74,7 @@ if(!window.XMLHttpRequest){
 };
 ```
 
-参考实现：https://github.com/LuvDaSun/xhr-polyfill/blob/master/src/XMLHttpRequestProxy.js
+参考实现：[https://github.com/LuvDaSun/xhr-polyfill/blob/master/src/XMLHttpRequestProxy.js](https://github.com/LuvDaSun/xhr-polyfill/blob/master/src/XMLHttpRequestProxy.js)
 
 ## shim 和 polyfill
 

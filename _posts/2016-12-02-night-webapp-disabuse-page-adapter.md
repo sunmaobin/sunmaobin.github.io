@@ -1,7 +1,7 @@
 ---
 
 title: 移动端H5解惑-页面适配（二）
-date: 20160701125435
+date: 20161202084059
 categories: [WEB]
 tags: [mobile]
 
@@ -383,7 +383,7 @@ document.documentElement.style.fontSize = (60 * clientCssWidth / 1080) * 2 + 'px
 
 先来说说场景，一般分为以下几种（其实，跟PC上所说的响应式差不多）：
 
-1. 横竖屏显示内容不同（有无问题）；
+1. 横竖屏显示内容不同（内容问题）；
 1. 横竖屏显示样式不同（样式问题）；
 
 再来说说通用的解决方案：
@@ -391,7 +391,43 @@ document.documentElement.style.fontSize = (60 * clientCssWidth / 1080) * 2 + 'px
 1. JS检测横竖屏并处理；
 1. CSS检测横竖屏并处理；
 
-### 5.1 JS检测横竖屏
+### 5.1 横竖屏显示内容问题
+
+我们知道横屏，相当于屏幕变宽了，这时候一行显示的内容就可以更多。所以，设计师可能会对横竖屏做2种不同的内容设计，如：
+
+![](http://i.imgur.com/oL7Gecf.png)
+
+如果是这种设计，那么我们也没什么纠结的，安装上文中提到的方法设计横竖屏2套css，然后按照下文的方法检测横竖屏分别显示即可。
+
+### 5.2 横竖屏显示样式问题
+
+这里有个要说的就是，设计师没有设计横屏的样式，那么如果我们按照上文提到的方案去处理，那么就会发现在横屏模式下字体显得非常大（因为屏幕宽了），显示的内容就少了。
+
+这种情况会显得很不协调，虽然还是等比例显示的，只不过需要多拖动下滚动条而已，但是你会觉得很怪。尤其是再有弹出框的时候，会更麻烦，弹出框有时候可能还会显示不完全。。。
+
+比如，下面的样式：
+
+![](http://i.imgur.com/7CEyHG8.png)
+
+像这种问题，我们上面提到的依据屏幕宽度自动调整根目录font-size的大小，就有点不合适了。这样虽然保证了横向的比例是严格按照设计搞来的，但是显示上非常丑。
+
+所以，我们一般的做法就是在横屏的时候font-size大小与竖屏保持不变，或者 `竖屏 x 1.5倍` 的字体大小。
+
+关键的代码看这里：
+
+```js
+var clientWidth = document.documentElement.clientWidth;
+
+//横屏状态
+if (window.orientation === 180 || window.orientation === 0) {
+    //直接使用clientHeight作为宽度，这样字体大小就跟竖屏时一样。
+    clientWidth = document.documentElement.clientHeight;
+};
+```
+
+这么处理了以后，横屏时显示的内容就会多一些，但是字体大小会看着舒服些！现在大多数的APP横屏时就是这么内容会显示多一些，但是字体不会变，就是这个道理。
+
+### 5.3 JS检测横竖屏
 
 `window.orientation`
 
@@ -410,7 +446,7 @@ window.addEventListener("onorientationchange" in window ? "orientationchange" : 
     }  
 }, false); 
 ```
-### 5.2 CSS判断横竖屏
+### 5.4 CSS判断横竖屏
 
 写在同一个CSS中：
 

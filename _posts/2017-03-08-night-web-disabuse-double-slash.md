@@ -30,11 +30,11 @@ tags: [URL 双斜杠 URI]
 
 这么书写的作用就是：浏览器在请求资源时会依据当前页面的协议头来决定加载资源的协议头。
 
-比如：当前页面是 `https` 开头的，那么依赖的这个文件就会以 `https` 协议去加载，否则使用 `https`加载。
+比如：当前页面是 `https` 开头的，那么依赖的这个文件就会以 `https` 协议去加载，否则使用 `http`加载。
 
 ## WHY
 
-为什么要这么做呢？不是js和css可以随便引入吗？为啥还要分协议呢？我统一直接使用 `http` 开头来加载资源有啥问题呢？
+为什么要这么做呢？不是js和css可以随便引入吗？为啥还要分协议呢？我统一使用 `http` 开头来加载资源有啥问题呢？
 
 * 如果你的站点就是 `http` 的，那么没一点问题。
 
@@ -107,7 +107,7 @@ var duoshuoQuery = {short_name:"your name"};
 
 意思就是说：其实 `HTTPS` 才是大势所趋，我们应该鼓励直接用 `HTTPS`，而不是妥协它做一些兼容性的解决方案。
 
-比如这篇文章：[Moving CDNs to HTTPS](https://github.com/konklone/cdns-to-https#conclusion-cdns-should-redirect-to-https)
+比如这篇文章的观点：[Moving CDNs to HTTPS](https://github.com/konklone/cdns-to-https#conclusion-cdns-should-redirect-to-https)
 
 ## 参考
 

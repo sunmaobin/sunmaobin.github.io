@@ -1,6 +1,6 @@
 ---
 
-title: JS解惑-()表达式的含义
+title: JS解惑-(fun)()表达式的含义
 date: 20160714050413
 categories: [WEB]
 tags: [js]

@@ -81,10 +81,31 @@ bootstrap 组件就是这么用的。
 
 答案是：通过操作符，将函数申明变为函数表达式，然后再执行。
 
-比如：!function autoFun(){}(); 可以这么理解。
+> 2017年3月29日21:05:26 修正和补充以下内容。
 
-* 第一步：var autoFun = function (){} //函数表达式
-* 第二步：!autoFun(); //执行函数
+比如：`!function autoFun(){}(); ` 可以这么理解：
+
+* 第一步：function autoFun(){}; //函数表达式
+* 第二步：!autoFun(); //执行函数，并将结果求反（!）
+
+之所以这么连起来，最主要的问题是以下这种写法是错误的：
+
+```js
+function autoFun(){}();
+```
+
+因为受JS语法解析器的影响，函数的定义和执行不能同时进行的。
+
+但是！如果是一个表达式，那么JS语法解析器会走另外的处理流程，这个流程就是上面提到的2步。
+
+当然，只要是表达式就可以，所以函数的定义不行，但是函数的申明就是可以的：
+
+```js
+var autoFun = function(){}();
+```
+
+这么写的结果就是function会执行，但是autoFun=undefined；原因是这时候autoFun的值等于function执行的结果，由于function是个空方法里面没有return值，所以结果就是未定义。
+当然，你这么写的目的，可能只是为了快速执行function，所以最后的autoFun的结果你并不关心，那就无所谓了。
 
 具体哪些操作符，可以达到这个目的，参考：[IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 

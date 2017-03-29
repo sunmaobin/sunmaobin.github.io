@@ -1,6 +1,6 @@
 ---
 
-title: font-face引用字体跨域
+title: CSS解惑-font-face引用字体跨域
 date: 20170308150612
 categories: [WEB]
 tags: [CSS 跨域]

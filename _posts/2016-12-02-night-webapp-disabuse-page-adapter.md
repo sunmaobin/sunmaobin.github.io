@@ -481,6 +481,41 @@ window.addEventListener("onorientationchange" in window ? "orientationchange" : 
 
 所以，当你看了我的这两篇文章，也许还是一知半解，这很正常，慢慢来，多多练习，相信你会明白的。
 
+## 补充
+
+补充时间：2017年4月14日10:25:54
+
+针对页面的自适应问题，这里补充一个要求不高，可以偷懒的解决办法。
+
+就是：**全部使用图片，图片100%显示即可。**
+
+比如：如果设计给你了一个PSD效果图，让你还原设计稿，那么你可以把他横着切成多个图片，然后一个页面就可以拼出来。只不过可能有一些细节，比如，交互要求有一些文字、图片是动画要求，那么这方式可能就不好搞了。
+
+所以，注意前提就是：**要求不高，基本是静态页面的话**。
+
+如果全部使用图片有性能问题的话，可以将页面的所有图片异步加载，比如：
+
+```js
+
+//html
+
+<img src='../img/loading.gif' data-src='../img/1.jpg' />
+<img src='../img/loading.gif' data-src='../img/2.jpg' />
+...
+
+//js
+
+$("img[data]").each(function{
+	let _link = $(this).data('src');
+
+	var img = new Image();
+	img.src = _link;
+	img.onload = () => {
+		$(this).prop('src',_link);
+	};
+});
+```
+
 ## 参考
 
 * [使用Flexible实现手淘H5页面的终端适配](https://github.com/amfe/article/issues/17)

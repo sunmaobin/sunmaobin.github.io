@@ -1,24 +1,5 @@
----
-layout: default
----
-
-<div class="main-post-list">
-
-  <ol class="post-list">
-    {% for post in paginator.posts %}
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-        <p class="excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}&hellip;</p>
-        <div class="post-list__meta"><time datetime="{{ post.date | date: "%Y-%m-%d" }}" class="post-list__meta--date date">{{ post.date | date: "%Y-%m-%d" }}</time> &#8226; <span class="post-meta__tags">{% for tag in post.tags %}<a href="{{ site.baseurl }}tags/#{{ tag }}">{{ tag }}</a> {% endfor %}</span></div>
-        <hr class="post-list__divider">
-      </li>
-    {% endfor %}
-  </ol>
-
-  <hr class="post-list__divider ">
-
-  {% if paginator.previous_page or paginator.next_page %}
-      {% include pagination.html %}
-  {% endif %}
-
-</div>
+<html>
+<head>
+<meta http-equiv="Refresh" content="0; url=https://github.com/sunmaobin/sunmaobin.github.io/issues" />
+</head>
+</html>

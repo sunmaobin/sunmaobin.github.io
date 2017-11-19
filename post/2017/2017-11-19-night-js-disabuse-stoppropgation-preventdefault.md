@@ -6,7 +6,7 @@
 
 ### 一组栗子
 
-```
+```html
 <div id="d1">
     <p id="p1">
         <span id="s1">
@@ -18,7 +18,7 @@
 
 加入我给如上HTML的三级标签上都加上Click事件：
 
-```
+```js
 //注意这里的最后一个参数，默认也是false
 document.getElementById('d1').addEventListener('click',function(e){
     console.log('d1');   
@@ -45,7 +45,7 @@ d1
 
 如果这时候修改一下事件绑定的方式，如下：
 
-```
+```js
 //最后一个参数修改为true
 document.getElementById('d1').addEventListener('click',function(e){
     console.log('d1');   
@@ -82,7 +82,7 @@ s1
 
 > 先说明下，IE旧的浏览器对于事件的定义不同（<=IE8），所以当你使用旧浏览器的时候，务必考虑兼容性！
 
-```
+```js
 function stopPropagation(e){
     if(e && e.stopPropagation){//支持W3C的stopPropagation()方法
         e.stopPropagation();
@@ -105,7 +105,7 @@ function stopPropagation(e){
 
 ## 如何阻止默认行为？
 
-```
+```js
 function stopDefault(e){
     if(e && e.preventDefault){//支持W3C的preventDefault()方法
         e.preventDefault();
@@ -134,7 +134,7 @@ function stopDefault(e){
 
 使用jQuery的事件方法，直接使用 `return false` 既可以阻止冒泡也可以阻止默认行为
 
-```
+```js
 $(ele).click(function(){
     //...
 

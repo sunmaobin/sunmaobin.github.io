@@ -86,8 +86,14 @@ selectCategory : function(categoryId, isRedirect) {
 }
 ```
 
+### 参考
 
-## 重复语句for循环化
+* 代码大全，第15章
+
+![](https://i.imgur.com/g4w0Gz0.png)
+
+
+## 重复语句for循环化（表驱动法）
 
 代码中发现有太多重复的语句，看似相同，但是又有些不同，于是乎就本能的习惯使用if语句写一大片！
 
@@ -96,6 +102,40 @@ selectCategory : function(categoryId, isRedirect) {
 核心的思想： `就是想尽一切办法将相似的部分放到一个对象或者数组中，然后循环处理。`
 
 ### 示例1
+
+显示一年内各个月的天数。
+
+* 最low的写法：
+
+```js
+function getDaysByMonth(month){
+    var days = 0;    
+    if(month == 1){
+        days = 31;
+    }else if(month == 2){
+        days = 28; // 不用考虑闰年的情况
+    }else if(month == 3){
+        days = 31；
+    }else if(...){
+        ...
+    };
+    return days;
+};
+```
+
+* 采用表驱动法的思路
+
+```js
+
+function getDaysByMonth(month){
+    //创建一张表
+    var daysAry = [31,28,31,30,31,30,31,31,30,31,30,31];
+    return daysAry[month];
+};
+
+```
+
+### 示例2
 
 原始代码：
 
@@ -128,7 +168,7 @@ for(var i=0,size=mapper.length;i<size;i++){
 
 ```
 
-### 示例2
+### 示例3
 
 原始代码：
 
@@ -205,6 +245,12 @@ function fun1(){
     };
 }
 ```
+
+### 参考
+
+* 代码大全，第18章
+
+![](https://i.imgur.com/5P5lL15.png)
 
 ## （jQuery）避免手动拼接URL参数
 
@@ -414,14 +460,11 @@ Math.min.apply(Math, [1,2,3]) //1
 ```
 
 
-
-
-
 ## 推荐书籍
 
-```js
-//代码大全
-```
+> 虽然这本书的示例代码都是VB写的，但是思想非常实用，建议大家都看下。
+
+![](https://i.imgur.com/kaDewJ3.png)
  
 
 

@@ -1,4 +1,4 @@
-# 经验分享-提高生产效率的一些编码技巧
+# 经验分享-提高生产效率的一些编码技巧（1）
 
 本文包含了一些个人开发经验总结和设计模式的总结，希望能给大家有所帮助。
 
@@ -252,6 +252,104 @@ function fun1(){
 
 ![](https://i.imgur.com/5P5lL15.png)
 
+## 巧用 `Array.join` 和 `String.split` 函数
+
+* `Array.join` - 将所有`数组`或者`类数组`的元素拼接为一个字符串并返回这个字符串，默认的连接符为 `,`；
+* `String.split` - 将一个字符串通过特定的字符串分割为一个数组并返回这个数组，如果不指定分隔符则默认返回一个字符，里面只有一个元素就是当前字符串；
+
+### 示例
+
+```js
+//join的用法
+
+var elements = ['Fire', 'Wind', 'Rain'];
+
+console.log(elements.join()); //expected output: Fire,Wind,Rain
+console.log(elements.join('-')); //expected output: Fire-Wind-Rain
+```
+
+```js
+//split用法
+var elements = 'Jan,Feb,Mar,Apr';
+
+console.log(elements.split());//["Jan,Feb,Mar,Apr"]
+console.log(elements.split(','));//["Jan","Feb","Mar","Apr"]
+console.log(elements.split(''));//["J", "a", "n", ",", "F", "e", "b", ",", "M", "a", "r", ",", "A", "p", "r"]
+```
+
+### 案例一
+
+假如后台需要传一个字段，该字段是所有页面上选中的元素的id，通过逗号拼接，如：`102,235,356,213`。
+
+* 最low的做法
+
+```js
+//通过代码将所有元素放到一个数组中
+var idAry = [102,235,356,213];
+
+//循环拼接数组
+var result = '';
+for(var i=0;i<idAry.length;i++){
+    result += idAry[i] + ',';
+};
+
+//发现最后多了一个逗号，去掉！
+result = result.substring(0,result.length-1);
+```
+
+* 推荐的办法
+
+```js
+//通过代码将所有元素放到一个数组中
+var idAry = [102,235,356,213];
+var result = idAry.join();
+```
+
+### 案例二
+
+页面需要循环一个数组，动态拼接为html语句 `<option>` 最后填充到页面上的 `<select>` 中。
+
+* 最low的做法
+
+```js
+var objAry = [{
+    id : 1,
+    name : '张三'
+},{
+    id : 2,
+    name : '李四'
+}];
+
+var html = '';
+for(var i=0;i<objAry.length;i++){
+    result += '<option id="'+ objAry[i].id +'">'+ objAry[i].name +'</option>';
+};
+
+$('select').html(html);
+
+```
+
+* 推荐的办法
+
+```js
+var objAry = [{
+    id : 1,
+    name : '张三'
+},{
+    id : 2,
+    name : '李四'
+}];
+
+var html = $.map(objAry,function(d){
+    return '<option id="'+ d.id +'">'+ d.name +'</option>';
+}).join('');
+
+$('select').html(html);
+
+```
+
+> [什么是类数组 Array-Like？](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)
+
 ## （jQuery）避免手动拼接URL参数
 
 在 `get` 请求时，很多人习惯手动拼接url参数，比如：
@@ -465,7 +563,8 @@ Math.min.apply(Math, [1,2,3]) //1
 > 虽然这本书的示例代码都是VB写的，但是思想非常实用，建议大家都看下。
 
 ![](https://i.imgur.com/kaDewJ3.png)
- 
 
 
+## 敬请期待
 
+> 下一篇：提高生产效率的编程思想之抽象能力（二）

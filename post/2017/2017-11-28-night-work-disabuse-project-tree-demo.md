@@ -1,6 +1,6 @@
-# 源码目录树骨架模板
+# 源码目录树构建技巧
 
-当你要将你的源码以树的形式展示出来的时候，下面骨架就能用上了。
+曾几何时看到别人的代码目录展示如下，非常的漂亮，于是我就把别人的这棵树拷贝过来，一个个修改变成自己的树，如下：
 
 ```js
 project
@@ -54,3 +54,14 @@ project
         ├── ...     // ...
         └── ...    // ...
 ```
+
+现在告诉大家，一个命令就可以搞定了！无论是windows和linux，在shell窗口直接输入：
+
+```js
+> tree
+```
+
+关于这个命令的参数，请参考：
+
+* windows：https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/tree.mspx?mfr=true
+* linux：https://www.computerhope.com/unix/tree.htm

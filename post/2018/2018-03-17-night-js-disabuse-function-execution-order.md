@@ -118,7 +118,7 @@ console.log('5、a=',a);
 
 ![](https://i.imgur.com/yXTTL3R.png)
 
-**补充说明：**错误类型为 `ReferenceError` 引用错误，也就是说系统根本不知道哪个对象或者函数下面的属性a，所以会报这个错误。如果这时候你打印 `window.a`，那么结果将是 `undefined` 而不会报错。
+**补充说明：** 错误类型为 `ReferenceError` 引用错误，也就是说系统根本不知道哪个对象或者函数下面的属性a，所以会报这个错误。如果这时候你打印 `window.a`，那么结果将是 `undefined` 而不会报错。
 
 ## 示例二
 

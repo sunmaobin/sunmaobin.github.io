@@ -174,7 +174,7 @@ UE用的比较多的工具是：`Adobe After Effects CC 2015`。
 
 ## 更多
 
-[移动端H5解惑-页面适配（二）](http://www.night123.com/2016/night-webapp-disabuse-page-adapter/)
+[移动端H5解惑-页面适配（二）](https://github.com/sunmaobin/sunmaobin.github.io/issues/28)
 
 ## 参考
 

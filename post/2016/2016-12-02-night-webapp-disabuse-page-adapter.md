@@ -4,7 +4,7 @@
 
 在了解如何做H5页面适配前，大家都应该把移动端涉及的一些概念搞明白，比如：`dpr` 是什么意思？
 
-[移动端H5解惑-概念术语（一）](http://www.night123.com/2016/night-webapp-disabuse-page-concept/)
+[移动端H5解惑-概念术语（一）](https://github.com/sunmaobin/sunmaobin.github.io/issues/27)
 
 
 

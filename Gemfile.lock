@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    RedCloth (4.3.0)
+    RedCloth (4.2.9)
     activesupport (4.2.5.1)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -92,12 +92,12 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mercenary (0.3.5)
-    mini_portile2 (2.0.0)
+    mini_portile2 (2.4.0)
     minitest (5.8.4)
     multipart-post (2.0.0)
     net-dns (0.8.0)
-    nokogiri (1.8.1)
-      mini_portile2 (~> 2.0.0.rc2)
+    nokogiri (1.10.4)
+      mini_portile2 (~> 2.4.0)
     octokit (4.2.0)
       sawyer (~> 0.6.0, >= 0.5.3)
     public_suffix (1.5.3)
